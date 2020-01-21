@@ -43,10 +43,9 @@ with open('README.md', 'w') as outfile:
 
 # Rename the directories
 os.rename('PythonProjectStarter',sys.argv[1])
-os.rename(os.getcwd(),os.path.dirname(os.getcwd())+sys.argv[1])
+os.rename(os.getcwd(),os.path.dirname(os.getcwd())+'/'+sys.argv[1])
 
 # Reinitialize git
-os.remove('.git')
 subprocess.run["git","init"]
 
 # Display final informations
