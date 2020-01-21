@@ -1,70 +1,34 @@
-# False Data Injection Attack on a simulated Air Traffic Controller
+# Python project structure and quickstart
 
-### Installation
+### Intention
 
-I worked on the project through a virtual environment with `virtualenvwrapper`
-and I highly recommend to do so as well. However, whether or not you are in a
-virtual environment, the installation proceeds as follows:
+Having a clean project structure is essential to quality code development. By
+cloning this repository and running a simple script, you can have a working environment
+in matters of minutes!
 
-* For downloading and installing the source code of the project:
+### Quickstart your project!
 
-  ```bash
-    $ cd <directory you want to install to>
-    $ git clone https://github.com/QDucasse/PythonStarterProject
-    $ python setup.py install
-  ```
-* For downloading and installing the source code of the project in a new virtual environment:  
+Simply run the `starter.py` script from the root folder and provide a name to
+your project in order for the script to reset the version control and refactor
+`setup.py`, the `README` as well the name of the directories.
 
-  *Download of the source code & Creation of the virtual environment*
-  ```bash
-    $ cd <directory you want to install to>
-    $ git clone https://github.com/QDucasse/PythonStarterProject
-    $ cd PythonStarterProject
-    $ mkvirtualenv -a . -r requirements.txt VIRTUALENV_NAME
-  ```
-  *Launch of the environment & installation of the project*
-  ```bash
-    $ workon VIRTUALENV_NAME
-    $ pip install -e .
-  ```
----
-### Structure of the project
-
-Quick presentation of the different modules of the project:
-* [**Package1:**][package]
-Dynamic systems models.
----
-### Requirements
-
-This project uses the following external libraries:
-* [`Numpy`][dependency1]
-
-If installed as specified above, the requirements are stated in the ``requirements.txt`` file
-and therefore automatically installed.  
-However, you can install each of them separately with the command:
 ```bash
-  $ pip install <library>
+  $ git clone git@github.com:QDucasse/PythonProjectStarter.git
+  $ cd PythonProjectStarter
+  $ python starter.py
 ```
 
----
-### Objectives and Milestones of the project
-
-- [X] Basic project structure
----
-
-### Testing
-
-All tests are written to work with `nose` and/or `pytest`. Just type `pytest` or
-`nosetests` as a command line in the project. Every test file can still be launched
-by executing the testfile itself.
+You can then create a new repository and link it to your new project by first
+creating a new repository on Github then
 ```bash
-  $ python PythonStarterProject/tests/chosentest.py
-  $ pytest
+  $ git remote add origin git@github.com:QDucasse/nbnm.git
+  $ git add .
+  $ git commit -m "Initial commit"
+  $ git push -u origin master
 ```
 
----
+There it is, your repository is now set up!
 
-### References
-
-[package]:https://github.com/QDucasse/PythonStarterProject/tree/master/PythonProjectStarter/package
-[dependency1]: https://numpy.org/
+Please check the different categories within the `setup.py` file and correct them
+in accordance with your project. The categories description, classifiers and
+keywords should be changing!

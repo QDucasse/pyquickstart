@@ -11,14 +11,10 @@ import datetime
 import subprocess
 
 ### LICENSE
-lines_license = []
-with open('setup.py') as infile:
-    for line in infile:
-        line = line.replace(,sys.argv[1])
-        lines_license.append(line)
-with open('setup.py', 'w') as outfile:
-    for line in lines_license:
-        outfile.write(line)
+with open('LICENSE') as infile:
+    for i,line in enumerate(infile):
+        if i==2:
+            line[14:17] = datetime.datetime.now().year
 
 ### README INSTALLATION
 os.remove('README.md')
