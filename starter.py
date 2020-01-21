@@ -14,7 +14,7 @@ import subprocess
 with open('LICENSE') as infile:
     for i,line in enumerate(infile):
         if i==2:
-            line[14:17] = datetime.datetime.now().year
+            line.replace('2020',str(datetime.datetime.now().year))
 
 ### README INSTALLATION
 os.remove('README.md')
