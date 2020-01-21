@@ -10,7 +10,7 @@ virtual environment, the installation proceeds as follows:
 
   ```bash
     $ cd <directory you want to install to>
-    $ git clone https://github.com/QDucasse/fdia_simulation
+    $ git clone https://github.com/QDucasse/PythonStarterProject
     $ python setup.py install
   ```
 * For downloading and installing the source code of the project in a new virtual environment:  
@@ -18,8 +18,8 @@ virtual environment, the installation proceeds as follows:
   *Download of the source code & Creation of the virtual environment*
   ```bash
     $ cd <directory you want to install to>
-    $ git clone https://github.com/QDucasse/fdia_simulation
-    $ cd fdia_simulation
+    $ git clone https://github.com/QDucasse/PythonStarterProject
+    $ cd PythonStarterProject
     $ mkvirtualenv -a . -r requirements.txt VIRTUALENV_NAME
   ```
   *Launch of the environment & installation of the project*
@@ -27,28 +27,17 @@ virtual environment, the installation proceeds as follows:
     $ workon VIRTUALENV_NAME
     $ pip install -e .
   ```
-
-  *Launch of the basic GUI*
-  ```bash
-    $ python fdia_simulation/app.py
-  ```
-Note that the GUI does not contain all the features of the project but allows
-you getting familiar with the components and interactions between them.  
-
 ---
-
 ### Structure of the project
 
 Quick presentation of the different modules of the project:
 * [**Package1:**][package]
 Dynamic systems models.
-
 ---
-
 ### Requirements
 
-This project uses five main libraries:
-* [`Dependency1`][dependency1]
+This project uses the following external libraries:
+* [`Numpy`][dependency1]
 
 If installed as specified above, the requirements are stated in the ``requirements.txt`` file
 and therefore automatically installed.  
@@ -57,12 +46,7 @@ However, you can install each of them separately with the command:
   $ pip install <library>
 ```
 
-
-**NOTE:** *This project was created with Python 3.7.3 and no backward compatibility is
-ensured.*  
-
 ---
-
 ### Objectives and Milestones of the project
 
 - [X] Basic project structure
@@ -82,5 +66,5 @@ by executing the testfile itself.
 
 ### References
 
-[package]:https://github.com/QDucasse/PythonStarterProject/tree/master/PythonStarterProject/package
-[dependency1]: https://dependency1.com
+[package]:https://github.com/QDucasse/PythonStarterProject/tree/master/PythonProjectStarter/package
+[dependency1]: https://numpy.org/
