@@ -10,18 +10,18 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='PythonProjectStarter',
+    name='pyquickstart',
 
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
     # http://packaging.python.org/en/latest/tutorial.html#version
-    version=PythonProjectStarter.__version__,
+    version=pyquickstart.__version__,
 
     description='Python project structure and starter',
     long_description=long_description,
 
     # The project's main homepage.
-    url='https://github.com/QDucasse/PythonProjectStarter',
+    url='https://github.com/QDucasse/pyquickstart',
 
     # Author details
     author='Quentin Ducasse',

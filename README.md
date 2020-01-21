@@ -13,15 +13,15 @@ your project in order for the script to reset the version control and refactor
 `setup.py`, the `README` as well the name of the directories.
 
 ```bash
-  $ git clone git@github.com:QDucasse/PythonProjectStarter.git
-  $ cd PythonProjectStarter
+  $ git clone git@github.com:QDucasse/pyquickstart.git
+  $ cd pyquickstart
   $ python starter.py
 ```
 
 You can then create a new repository and link it to your new project by first
 creating a new repository on Github then
 ```bash
-  $ git remote add origin git@github.com:QDucasse/nbnm.git
+  $ git remote add origin git@github.com:QDucasse/<repo name>.git
   $ git add .
   $ git commit -m "Initial commit"
   $ git push -u origin master

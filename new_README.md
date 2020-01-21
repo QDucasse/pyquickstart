@@ -1,4 +1,4 @@
-# PythonStarterProject
+# pyquickstart
 
 ### Installation
 
@@ -10,7 +10,7 @@ virtual environment, the installation proceeds as follows:
 
   ```bash
     $ cd <directory you want to install to>
-    $ git clone https://github.com/QDucasse/PythonStarterProject
+    $ git clone https://github.com/QDucasse/pyquickstart
     $ python setup.py install
   ```
 * For downloading and installing the source code of the project in a new virtual environment:  
@@ -18,8 +18,8 @@ virtual environment, the installation proceeds as follows:
   *Download of the source code & Creation of the virtual environment*
   ```bash
     $ cd <directory you want to install to>
-    $ git clone https://github.com/QDucasse/PythonStarterProject
-    $ cd PythonStarterProject
+    $ git clone https://github.com/QDucasse/pyquickstart
+    $ cd pyquickstart
     $ mkvirtualenv -a . -r requirements.txt VIRTUALENV_NAME
   ```
   *Launch of the environment & installation of the project*
@@ -58,7 +58,7 @@ All tests are written to work with `nose` and/or `pytest`. Just type `pytest` or
 `nosetests` as a command line in the project. Every test file can still be launched
 by executing the testfile itself.
 ```bash
-  $ python PythonStarterProject/tests/chosentest.py
+  $ python pyquickstart/tests/chosentest.py
   $ pytest
 ```
 
@@ -66,5 +66,5 @@ by executing the testfile itself.
 
 ### References
 
-[package]:https://github.com/QDucasse/PythonStarterProject/tree/master/PythonProjectStarter/package
+[package]:https://github.com/QDucasse/pyquickstart/tree/master/pyquickstart/package
 [dependency1]: https://numpy.org/

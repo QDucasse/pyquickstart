@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# PythonProjectStarter
+# pyquickstart
 # author - Quentin Ducasse
 # https://github.com/QDucasse
 # quentin.ducasse@ensta-bretagne.org
@@ -25,7 +25,7 @@ os.rename('new_README.md','README.md')
 lines_setup = []
 with open('setup.py') as infile:
     for line in infile:
-        line = line.replace('PythonProjectStarter',sys.argv[1])
+        line = line.replace('pyquickstart',sys.argv[1])
         lines_setup.append(line)
 with open('setup.py', 'w') as outfile:
     for line in lines_setup:
@@ -35,14 +35,14 @@ with open('setup.py', 'w') as outfile:
 lines_setup = []
 with open('README.md') as infile:
     for line in infile:
-        line = line.replace('PythonProjectStarter',sys.argv[1])
+        line = line.replace('pyquickstart',sys.argv[1])
         lines_setup.append(line)
 with open('README.md', 'w') as outfile:
     for line in lines_setup:
         outfile.write(line)
 
 # Rename the directories
-os.rename('PythonProjectStarter',sys.argv[1])
+os.rename('pyquickstart',sys.argv[1])
 os.rename(os.getcwd(),os.path.dirname(os.getcwd())+'/'+sys.argv[1])
 
 # Reinitialize git
