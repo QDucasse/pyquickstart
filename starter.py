@@ -9,6 +9,7 @@ import os
 import sys
 import datetime
 import subprocess
+from pathlib import Path
 
 ### LICENSE
 with open('LICENSE') as infile:
@@ -42,7 +43,7 @@ with open('README.md', 'w') as outfile:
 
 # Rename the directories
 os.rename('PythonProjectStarter',sys.argv[1])
-os.rename(od.getcwd(),sys.argv[1])
+os.rename(os.getcwd(),Path(os.getcwd()).parent+sys.argv[1])
 
 # Reinitialize git
 os.remove('.git')
