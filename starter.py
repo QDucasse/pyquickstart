@@ -45,8 +45,9 @@ with open('README.md', 'w') as outfile:
 os.rename('pyquickstart',sys.argv[1])
 os.rename(os.getcwd(),os.path.dirname(os.getcwd())+'/'+sys.argv[1])
 
-# Reinitialize git
-subprocess.run["git","init"]
+print("Your project is now properly quickstarted! It can be found under the name you used: \n\tcd <your_name>")
+print("===================================================================================\n\n")
+print("Some actions still have to be done,\n\t-Setup git by removing .git and using git init\n\t-Check the setup.py file\n\t-Configure your virtual environment using mkvirtualenv -a . <your_env_name>")
 
 # Display final informations
 # Git setup
