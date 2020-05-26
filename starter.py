@@ -21,30 +21,25 @@ with open('LICENSE') as infile:
 os.remove('README.md')
 os.rename('new_README.md','README.md')
 
-# Rename the project in the setup
-lines_setup = []
-with open('setup.py') as infile:
-    for line in infile:
-        line = line.replace('pyquickstart',sys.argv[1])
-        lines_setup.append(line)
-with open('setup.py', 'w') as outfile:
-    for line in lines_setup:
-        outfile.write(line)
+# Rename all 'pyquickstart' to the provided name
+for subdir, dirs, files in os.walk(os.getcwd()):
+    for filename in files:
+        filepath = subdir + os.sep + filename
 
-# README
-lines_setup = []
-with open('README.md') as infile:
-    for line in infile:
-        line = line.replace('pyquickstart',sys.argv[1])
-        lines_setup.append(line)
-with open('README.md', 'w') as outfile:
-    for line in lines_setup:
-        outfile.write(line)
+        if filepath.endswith(".py"):
+            lines_setup = []
+            with open(filepath) as infile:
+                for line in infile:
+                    line = line.replace('pyquickstart',sys.argv[1])
+                    lines_setup.append(line)
+            with open(filepath, 'w') as outfile:
+                for line in lines_setup:
+                    outfile.write(line)
 
 # Rename the directories
 os.rename('pyquickstart',sys.argv[1])
 os.rename(os.getcwd(),os.path.dirname(os.getcwd())+'/'+sys.argv[1])
 os.remove(sys.argv[0])
 os.chdir('../')
-print("Your project is now properly quickstarted! It can be found under the name you used: \n\tcd <your_name>\n")
-print("Some actions still have to be done,\n\t-Setup git by removing .git and using git init\n\t-Check the setup.py file\n\t-Configure your virtual environment using mkvirtualenv -a . <your_env_name>")
+print("Your project is now properly quickstarted! It can be found under the name you used: \n  cd <your_name>\n")
+print("Some actions still have to be done,\n  -Setup git by removing .git and using git init\n  -Check the setup.py file\n  -Configure your virtual environment using mkvirtualenv -a . <your_env_name>")
